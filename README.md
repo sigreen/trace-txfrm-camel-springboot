@@ -20,19 +20,23 @@ In order to run this example, a evaluation license must be obtained from [Trace 
 
 5. Execute the following commands via the CLI to install the prerequisite JAR files in your local Maven repostiory:
 
-	mvn install:install-file -DgroupId=com.tracegroup.transformer -DartifactId=transformer-runtime-complete -Dversion=3.6.3 -Dfile=transformer-runtime-with-log4j-3.6.3-complete.jar -Dpackaging=jar
+```
+mvn install:install-file -DgroupId=com.tracegroup.transformer -DartifactId=transformer-runtime-complete -Dversion=3.6.3 -Dfile=transformer-runtime-with-log4j-3.6.3-complete.jar -Dpackaging=jar
 
-	mvn install:install-file -DgroupId=com.tracegroup.transformer -DartifactId=transformer-camel-osgi -Dversion=3.6.3 -Dfile=transformer-camel-3.6.3-osgi-bundle.jar -Dpackaging=jar
+mvn install:install-file -DgroupId=com.tracegroup.transformer -DartifactId=transformer-camel-osgi -Dversion=3.6.3 -Dfile=transformer-camel-3.6.3-osgi-bundle.jar -Dpackaging=jar
 
-	mvn install:install-file -DgroupId=com.tracegroup.transformer -DartifactId=transformer-designtime -Dversion=3.6.3 -Dfile=transformer-designtime-3.6.3.jar -Dpackaging=jar
+mvn install:install-file -DgroupId=com.tracegroup.transformer -DartifactId=transformer-designtime -Dversion=3.6.3 -Dfile=transformer-designtime-3.6.3.jar -Dpackaging=jar
 
-	mvn install:install-file -DgroupId=com.tracegroup.transformer -DartifactId=currencylib -Dversion=1.0.5 -Dfile=currencylib-1.0.5.jar -Dpackaging=jar
+mvn install:install-file -DgroupId=com.tracegroup.transformer -DartifactId=currencylib -Dversion=1.0.5 -Dfile=currencylib-1.0.5.jar -Dpackaging=jar
+```
 	
 6.  There should be a file in the temp directory called `CamelIntegrationTestSample.zip`.  Extract the project, then copy CamelIntegrationTestSample/SampleTransformerProject/build/SampleTransformerProject-1.0-SNAPSHOT.jar to the temp directory
 
 7. Install the Trace Transformer sample project to your local Maven repository by executing the following command:
 
-	mvn install:install-file -DgroupId=com.acme.messaging -DartifactId=SampleTransformerProject -Dversion=1.0.0 -Dfile=SampleTransformerProject-1.0-SNAPSHOT.jar -Dpackaging=jar
+```
+mvn install:install-file -DgroupId=com.acme.messaging -DartifactId=SampleTransformerProject -Dversion=1.0.0 -Dfile=SampleTransformerProject-1.0-SNAPSHOT.jar -Dpackaging=jar
+```
 
 #### Test the example
 
