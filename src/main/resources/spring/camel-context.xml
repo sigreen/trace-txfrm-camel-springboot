@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd        http://camel.apache.org/schema/spring       http://camel.apache.org/schema/spring/camel-spring.xsd">
+    <!-- You could also define a traditional camel context here -->
+    <camelContext id="camelContext-eb2f3a4f-2e60-4601-8d4c-58a1fbd0c667" xmlns="http://camel.apache.org/schema/spring">
+        		<route id="_route1">
+        			<from id="_from1" uri="timer:foo?repeatCount=1" />
+        			<setBody id="_setBody1">
+        				<constant>My Constant Message</constant>
+        			</setBody>
+        			<to id="_to1" uri="txfrmr:com.acme.messaging.SampleTransformerProject/Map1" />
+        			<log id="_log1" message="The message contains ${body}" />
+        		</route>
+    </camelContext>
+</beans>
